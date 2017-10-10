@@ -435,6 +435,11 @@ h4 {
   max-height: 200px;
 }
 
+.truncated-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (max-width: 768px) {
   .containers .panel-heading {
     justify-content: space-between;

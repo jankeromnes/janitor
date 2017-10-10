@@ -54,6 +54,16 @@
               </div>
             </div>
             <div class="row">
+              <div class="col-sm-6">
+                <label>Host</label>
+                <pre class="input-sm truncated-text">{{= machine.docker.host in html}}</pre>
+              </div>
+              <div class="col-sm-6">
+                <label>Container</label>
+                <pre class="input-sm truncated-text">{{= machine.docker.container in html}}</pre>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-sm-12">
                 <label>Access via SSH</label>
                 <pre>ssh -p{{= machine.docker.ports['22'].port in integer}} user@{{= machine.docker.host in html}}</pre>
