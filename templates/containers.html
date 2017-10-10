@@ -47,8 +47,18 @@
             </div>
           </div>
           <div class="panel-body">
-            <label>Status</label>
-            <span class="project-status" data-status="{{= machine.status in xmlattr}}"></span>
+            <div class="row">
+              <div class="col-sm-12">
+                <label>Status</label>
+                <span class="project-status" data-status="{{= machine.status in xmlattr}}"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <label>Access via SSH</label>
+                <pre>ssh -p{{= machine.docker.ports['22'].port in integer}} user@{{= machine.docker.host in html}}</pre>
+              </div>
+            </div>
             <p class="project-updated">Built <time class="project-timestamp" data-timestamp="{{= machine.data.updated in integer}}"></time>.</p>
           </div>
         </div>{{
